@@ -54,7 +54,7 @@ header {
   padding-top: 48px;
   margin-block-end: 154px;
   background-image: url(../images/bg-hero-desktop.svg);
-  background-size:cover;
+  background-size: cover;
 }
 
 .header__top {
@@ -266,7 +266,7 @@ footer {
     .log {
       position: absolute;
       top: 0;
-      left: 0;
+      left: 6px;
       transform: translateY(600%);
       width: 152px;
       height: 24px;
@@ -278,66 +278,29 @@ footer {
     .cont {
       gap: 17px;
       max-width: 379px;
-      padding-inline-start: 40px;
-      /* position: relative; */
       .cont-text {
-        position: relative;
-      }
-      .cont-text::before {
-        content: '';
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        background-repeat: no-repeat;
+        display: inline-block;
         background-image: url(../images/icon-location.svg);
-        top: 6px;
-        left: -48px;
-        color: #fff;
+        background-repeat: no-repeat;
+        background-position: 0 6px;
+        padding-inline-start: 40px;
       }
       .cont-tel {
-        position: relative;
-      }
-      .cont-tel::before {
-        content: '';
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        background-repeat: no-repeat;
+        display: inline-block;
+        padding-inline-start: 40px;
         background-image: url(../images/icon-phone.svg);
-        top: 3px;
-        left: -48px;
-        color: #fff;
+        background-repeat: no-repeat;
+        background-position: 0 6px;
       }
       .cont-email {
-        position: relative;
-      }
-      .cont-email::before {
-        content: '';
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        background-repeat: no-repeat;
+        display: inline-block;
+        padding-inline-start: 40px;
         background-image: url(../images/icon-email.svg);
-        top: 6px;
-        left: -48px;
-        color: #fff;
-      }
-    }
-    .about {
-      gap: 12px;
-      min-width: 96px;
-      a:hover {
-        text-decoration: underline;
+        background-repeat: no-repeat;
+        background-position: 0 6px;
       }
     }
 
-    .career {
-      gap: 12px;
-      min-width: 116px;
-      a:hover {
-        text-decoration: underline;
-      }
-    }
     .copyright {
       justify-content: space-between;
       color: #fff;
@@ -349,8 +312,38 @@ footer {
       .social {
         display: flex;
         gap: 12px;
-        a:hover {
-          background-color: #ff52c1;
+        .fb {
+          display: inline-block;
+          background-image: url(../images/icon-fb.svg);
+          width: 31px;
+          height: 31px;
+          background-repeat: no-repeat;
+          transition: 0.5s;
+        }
+        .fb:hover {
+          background-image: url(../images/icon-fb-pink.svg);
+        }
+        .tw {
+          display: inline-block;
+          background-image: url(../images/icon-twiter.svg);
+          width: 32px;
+          height: 32px;
+          background-repeat: no-repeat;
+          transition: 0.5s;
+        }
+        .tw:hover {
+          background-image: url(../images/icon-twiter-pink.svg);
+        }
+        .ins {
+          display: inline-block;
+          background-image: url(../images/icon-inst.svg);
+          width: 32px;
+          height: 32px;
+          background-repeat: no-repeat;
+          transition: 0.5s;
+        }
+        .ins:hover {
+          background-image: url(../images/icon-inst-pink.svg);
         }
       }
     }
@@ -364,5 +357,29 @@ footer {
     font-size: 12px;
     line-height: 18px;
     color: #ffffff;
+  }
+}
+nav {
+  display: flex;
+  column-gap: 130px;
+  .about {
+    row-gap: 12px;
+    min-width: 96px;
+    transition: all 0.5s;
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .career {
+    row-gap: 12px;
+    min-width: 116px;
+     /* li a {
+      transition: 0.5s;
+    } */
+    a:hover {
+      text-decoration: underline;
+      transition: 0.5s;
+    }
   }
 }
